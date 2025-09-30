@@ -56,7 +56,7 @@ const NavBar = () => {
                     <figure>
                         <img src="../../public/logoBanco.png" alt="" className="logoBlanco" />
                     </figure>
-                    Huellitas
+                    Cínica RAMVET
                 </NavLink>
                 {/* <NavLink to="/" className="nav-link nav-item" end><GiHospitalCross className="logo" /></NavLink> */}
                 <NavLink to="/quienesSomos" className="nav-link nav-item">Quiénes Somos</NavLink>
