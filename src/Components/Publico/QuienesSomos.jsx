@@ -84,7 +84,7 @@ const QuienesSomos = () => {
               <img src="./5.jpeg" class="card-img-top" alt="Responsive image" />
               <div className="card-body">
 
-                <h5 className="card-title"> Dra. Patricia Quintanilla y Dr. Fernando Sosa</h5>
+                <h5 className="card-title"> Dra. Patricia Soler y Dr. Fernando Sosa</h5>
                 <p className="card-text">Clínica Médica</p>
               </div>
             </div>
@@ -114,7 +114,7 @@ const QuienesSomos = () => {
             <div className="card">
               <img src="./RV.jpg" class="card-img-top" alt="Responsive image" />
               <div className="card-body">
-                <h5 className="card-title"> Dra. Carolina Pereyra y Dr. Salguero Sebastián</h5>
+                <h5 className="card-title"> Dra. Ayelén Silva y Dr. Andrés Roca</h5>
                 <p className="card-text">Cirugia General</p>
               </div>
             </div>
