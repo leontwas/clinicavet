@@ -1,0 +1,2 @@
+Este proyecto incluye software con licencia MIT de Facebook, Inc. (React) y 
+software con licencia Apache 2.0 de Google LLC (Firebase). Ver archivo LICENCIAS.txt.

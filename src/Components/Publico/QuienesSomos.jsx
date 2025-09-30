@@ -20,10 +20,10 @@ const QuienesSomos = () => {
             <Carousel.Caption>
 
               <div className="txt">
-                <h1>Somos Huellitas</h1>
+                <h1>Somos RAMVET</h1>
                 <p>
                   Un centro médico de atención integral para mascotas.
-                  <br /> Desde el año 2019 ofrecemos el servicio de <br />
+                  <br /> Desde el año 2025 ofrecemos el servicio de <br />
                   "Historia Clínica Digital" para que puedas tener <br />
                   un registro de todas  las consultas en un solo lugar.<br />
                 </p>
@@ -75,7 +75,7 @@ const QuienesSomos = () => {
       </div>
 
       <div>
-        <h3 className="esp"><img src="./logoBlanco.jpg"
+        <h3 className="esp"><img src="../../../public/logoBanco.png"
           alt="Responsive image" className="logoBlanco" /> Nuestro equipo </h3>
 
         <div className="row row-cols-1 row-cols-md-2 g-4">
@@ -84,7 +84,7 @@ const QuienesSomos = () => {
               <img src="./5.jpeg" class="card-img-top" alt="Responsive image" />
               <div className="card-body">
 
-                <h5 className="card-title"> Dra. Patricia Hernández y Dr. Nicolás Sáenz</h5>
+                <h5 className="card-title"> Dra. Patricia Quintanilla y Dr. Fernando Sosa</h5>
                 <p className="card-text">Clínica Médica</p>
               </div>
             </div>
@@ -94,7 +94,7 @@ const QuienesSomos = () => {
             <div className="card">
               <img src="./4.jpeg" class="card-img-top" alt="Responsive image" />
               <div className="card-body">
-                <h5 className="card-title">Dra. Carla Sevilla</h5>
+                <h5 className="card-title">Dra. Sofía Machicado</h5>
                 <p className="card-text">Especialista en Nutrición.</p>
               </div>
             </div>
@@ -104,7 +104,7 @@ const QuienesSomos = () => {
             <div className="card">
               <img src="./dx2.jpg" class="card-img-top" alt="Responsive image" />
               <div className="card-body">
-                <h5 className="card-title">Dr. Carlos Spina</h5>
+                <h5 className="card-title">Dr. Humberto Rojas</h5>
                 <p className="card-text">Traumatología y Diagnóstico por Imagénes.</p>
               </div>
             </div>
@@ -114,7 +114,7 @@ const QuienesSomos = () => {
             <div className="card">
               <img src="./RV.jpg" class="card-img-top" alt="Responsive image" />
               <div className="card-body">
-                <h5 className="card-title"> Dra. Andrea Diaz y Dr. Juan Goncalves</h5>
+                <h5 className="card-title"> Dra. Carolina Pereyra y Dr. Salguero Sebastián</h5>
                 <p className="card-text">Cirugia General</p>
               </div>
             </div>

@@ -6,7 +6,7 @@ const Footer = () => {
             <div id="footer">
                 <div id="div-footer-logo">
                     <div><img src="/logoNegro.jpg" alt="" className="logoBlanco" /></div>
-                    <div>Huellitas</div>
+                    <div>Clínica RAMVET</div>
                 </div>
                 <div id='div-footer-contenido'>
                     <div>
@@ -14,11 +14,11 @@ const Footer = () => {
                     <li>Contacto:&nbsp;&nbsp;&nbsp;</li>
                     <li>Av. Siempreviva 153, CABA&nbsp;|</li>
                     <li>&nbsp;&nbsp;(011) 5050-5050&nbsp;&nbsp;</li>
-                    <li>|&nbsp;huellitas@mail.com</li>
+                    <li>|&nbsp;ramvet@mail.com</li>
                     </ul>
                     </div>
                     <div id='div-footer-copyright'>
-                        <p>© 2023 VeterinariaX - Todos los derechos reservados.</p>
+                        <p>© 2025 CLÍNICA RAMVET - Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>

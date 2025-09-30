@@ -54,7 +54,7 @@ const NavBar = () => {
             Con la prop end le indicamos que matchee solo el path especificado, y no los paths hijos*/}
                 <NavLink to="/" className="nav-link nav-item huellitas">
                     <figure>
-                        <img src="/logoBlanco.png" alt="" className="logoBlanco" />
+                        <img src="../../public/logoBanco.png" alt="" className="logoBlanco" />
                     </figure>
                     Huellitas
                 </NavLink>
