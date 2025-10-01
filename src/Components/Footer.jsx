@@ -12,8 +12,8 @@ const Footer = () => {
                     <div>
                     <ul>
                     <li>Contacto:&nbsp;&nbsp;&nbsp;</li>
-                    <li>Av. Siempreviva 153, CABA&nbsp;|</li>
-                    <li>&nbsp;&nbsp;(011) 5050-5050&nbsp;&nbsp;</li>
+                    <li>Av. Cabildo 30, CABA&nbsp;|</li>
+                    <li>&nbsp;&nbsp;(011) 4123-1234&nbsp;&nbsp;</li>
                     <li>|&nbsp;ramvet@mail.com</li>
                     </ul>
                     </div>

@@ -43,7 +43,7 @@ const Consultas = () => {
             <div className="dato">
               <span>
                 <GrLocation size={35} className="icono_dato" />
-               Av. Cabildo 30, CABA
+               Av. Cabildo 28, CABA
               </span>
             </div>
             <div className="dato">
@@ -55,7 +55,7 @@ const Consultas = () => {
             <div className="dato">
               <iframe
                 id="mapa"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.1601800731014!2d-58.43616299999999!3d-34.574813299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb595beb67e17%3A0x7b9d2c9e96f6519b!2sBIC%2C%20Av.%20Cabildo%2030%2C%20C1425%20C1425BIC%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1759266329158!5m2!1ses!2sar" 
+               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d821.2901328322168!2d-58.436619926037196!3d-34.57480441124266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1759267340210!5m2!1ses!2sar" 
               ></iframe>
             </div>
           </div>
