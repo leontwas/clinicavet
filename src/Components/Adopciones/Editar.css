@@ -1,17 +1,48 @@
 .container_select_edit {
     margin-top: 10px;
+    width: 100%;
 }
 
 .container_select_edit select {
-    width: 300px;
+    width: 100%;
+    max-width: 100%;
 }
 
-.editarMascota_form,
-.Especie_tag {
-    font-size: 1.2rem;
+.editarMascota_form {
+    width: 100%;
+    max-width: 480px;
+    font-size: 1.05rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .editarMascota_form input {
-    height: 40px;
+    height: 44px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    padding: 0 12px;
+    font-size: 1rem;
 }
+
+.editarMascota_form input:focus,
+.editarMascota_form textarea:focus {
+    border-color: purple;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(128, 0, 128, 0.15);
+}
+
+.editarMascota_form textarea {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    padding: 10px 12px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+}
+
 

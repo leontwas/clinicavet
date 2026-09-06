@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <!-- Veterinary Surgery Icon in Black Line-art style -->
+  <!-- Operating Lamp / Light -->
+  <path d="M100 20 L100 45" stroke="#111" stroke-width="6" stroke-linecap="round" />
+  <path d="M70 45 L130 45 C130 45 140 65 140 70 L60 70 C60 65 70 45 70 45 Z" fill="#fff" stroke="#111" stroke-width="6" stroke-linejoin="round" />
+  <path d="M68 70 L132 70" stroke="#111" stroke-width="4" stroke-linecap="round" />
+  <path d="M100 70 L100 75" stroke="#ffb300" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- Operating Table -->
+  <rect x="35" y="115" width="130" height="14" rx="5" fill="#fff" stroke="#111" stroke-width="6" />
+  <!-- Table Base & Stand -->
+  <path d="M92 129 L92 165 L65 175" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M108 129 L108 165 L135 175" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M60 175 L140 175" stroke="#111" stroke-width="6" stroke-linecap="round" />
+
+  <!-- Surgical Tools / Scalpel & Cross symbol -->
+  <!-- Medical Cross on Table -->
+  <circle cx="100" cy="95" r="15" fill="#fff" stroke="#111" stroke-width="4" />
+  <path d="M100 87 L100 103 M92 95 L108 95" stroke="#111" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Scalpel on Left -->
+  <path d="M48 95 L58 85 L62 89 L52 99 Z" fill="#fff" stroke="#111" stroke-width="3" />
+  <path d="M48 95 C45 98 44 105 44 105 C44 105 51 104 54 101 L52 99" fill="#111" stroke="#111" stroke-width="2" />
+
+  <!-- Scissors / Clamp on Right -->
+  <circle cx="152" cy="85" r="4" stroke="#111" stroke-width="3" />
+  <circle cx="160" cy="88" r="4" stroke="#111" stroke-width="3" />
+  <path d="M150 89 L142 105 M158 92 L140 105" stroke="#111" stroke-width="3" stroke-linecap="round" />
+</svg>

@@ -1,9 +1,14 @@
-.container_nuevaEntrada{
+.container_nuevaEntrada {
     min-height: 82vh;
+    padding: 30px 15px 50px 15px;
+    width: 100%;
 }
+
 .titulo_consulta {
     margin-top: 20px;
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: #1b262c;
 }
 
 .container_consulta {
@@ -11,10 +16,47 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.container_consulta span {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #666;
 }
 
 .texto_consulta {
-    width: 50%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 550px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    padding: 12px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.texto_consulta:focus {
+    border-color: purple;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(128, 0, 128, 0.15);
+}
+
+.container_nuevaEntrada .volver {
+    min-height: 44px;
+    min-width: 140px;
+    margin: 8px 6px;
+}
+
+@media screen and (max-width: 576px) {
+    .container_nuevaEntrada {
+        padding: 20px 12px 40px 12px;
+    }
+
+    .texto_consulta {
+        max-width: 100%;
+    }
 }

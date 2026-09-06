@@ -189,7 +189,7 @@ const Turnos = () => {
   return (
     <div className="container_turnos container">
       <h1 className="titulo_pagina">Turnos</h1>
-      <Table striped>
+      <Table responsive striped hover className="mt-4">
         <thead>
           <tr>
             <th>Fecha</th>

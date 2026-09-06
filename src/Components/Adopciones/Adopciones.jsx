@@ -6,6 +6,7 @@ import { db } from "../firebaseConfig/firebase";
 import { useState, useEffect, useContext } from "react"
 import { AuthContext } from "../firebaseConfig/AuthProvider"
 import { getAuth } from "firebase/auth";
+import { obtenerFotoMascota, FOTOS_POR_DEFECTO } from "./adopcionesUtils";
 import "./Adopciones.css"
 import {
     FadeLoader
@@ -121,21 +122,32 @@ const Adopciones = () => {
                 </Link>
             </div>
             <div id="contenedor_adopciones">
-                {adopciones.map((adopcion) => (
-                    <div className="tarjeta_adopciones" key={adopcion.id}>
-                        <div className="tarjeta_adopciones_cuerpo">
-                            <div>
-                                <img src={`${adopcion.Foto}`} alt=""></img>
+                {adopciones.map((adopcion) => {
+                    const fotoUrl = obtenerFotoMascota(adopcion.Foto, adopcion.Nombre, adopcion.Especie);
+                    return (
+                        <div className="tarjeta_adopciones" key={adopcion.id}>
+                            <div className="tarjeta_adopciones_cuerpo">
+                                <div>
+                                    <img 
+                                        src={fotoUrl} 
+                                        alt={adopcion.Nombre || "Mascota"} 
+                                        onError={(e) => { 
+                                            e.currentTarget.onerror = null; 
+                                            e.currentTarget.src = obtenerFotoMascota("", adopcion.Nombre, adopcion.Especie); 
+                                        }} 
+                                    />
+                                </div>
+                            </div>
+                            <div className="tarjeta_adopciones_titulo">{adopcion.Nombre}</div>
+                            <div className="tarjeta_adopciones_pie">
+                                <Link to={`/adopcion/${adopcion.id}`}><button>Más información</button></Link>
+                            </div>
+                            <div className="tarjeta_adopciones_bot">
+                                <LogInLinks isUserLoggedIn={isUserLoggedIn} id={adopcion.id} getAdopciones={getAdopciones}></LogInLinks>
                             </div>
                         </div>
-                        <div className="tarjeta_adopciones_titulo">{adopcion.Nombre}</div>
-                        <div className="tarjeta_adopciones_pie">
-                            <Link to={`/adopcion/${adopcion.id}`}><button>Más información</button></Link>
-                        </div>
-                        <div className="tarjeta_adopciones_bot">
-                            <LogInLinks isUserLoggedIn={isUserLoggedIn} id={adopcion.id} getAdopciones={getAdopciones}></LogInLinks>
-                        </div>
-                    </div>))}
+                    );
+                })}
             </div>
             
             {isAdmin && (

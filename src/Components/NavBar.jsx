@@ -2,12 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css"
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import { MdOutlineLocalGroceryStore } from "react-icons/md";
-import { GiHospitalCross } from "react-icons/gi";
-import { useContext } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useContext, useState } from "react";
 import { AuthContext } from "./firebaseConfig/AuthProvider"
 
-const LogInLinks = () => {
+const LogInLinks = ({ onLinkClick }) => {
 
     const User = useContext(AuthContext);
     const user = User.currentUser;
@@ -17,8 +16,12 @@ const LogInLinks = () => {
     if (!isUserLoggedIn) {
         return (
             <>
-                <NavLink to="/login" className="nav-link nav-item"><button id="botonIngresar" className="botonNavNoLogin">Ingresar</button></NavLink>
-                <NavLink to="/register" className="nav-link nav-item"><button id="botonRegistrate" className="botonNavNoLogin">Registrate</button></NavLink>
+                <NavLink to="/login" className="nav-link nav-item" onClick={onLinkClick}>
+                    <button id="botonIngresar" className="botonNavNoLogin">Ingresar</button>
+                </NavLink>
+                <NavLink to="/register" className="nav-link nav-item" onClick={onLinkClick}>
+                    <button id="botonRegistrate" className="botonNavNoLogin">Registrate</button>
+                </NavLink>
             </>
         );
     }
@@ -26,9 +29,11 @@ const LogInLinks = () => {
     else if (isUserLoggedIn && user.email == 'admin@gmail.com') {
         return (
             <>
-                <NavLink to="/clientes" className="nav-link nav-item">Clientes</NavLink>
-                <NavLink to="/turnos" className="nav-link nav-item">Turnos</NavLink>
-                <NavLink to="/signOut" className="nav-link nav-item"><button id="botonCerrarSesion" className="botonNavLogin">Cerrar Sesión</button></NavLink>
+                <NavLink to="/clientes" className="nav-link nav-item" onClick={onLinkClick}>Clientes</NavLink>
+                <NavLink to="/turnos" className="nav-link nav-item" onClick={onLinkClick}>Turnos</NavLink>
+                <NavLink to="/signOut" className="nav-link nav-item" onClick={onLinkClick}>
+                    <button id="botonCerrarSesion" className="botonNavLogin">Cerrar Sesión</button>
+                </NavLink>
             </>
         );
     }
@@ -36,46 +41,59 @@ const LogInLinks = () => {
     else {
         return (
             <>
-                <NavLink to={`/misMascotas/${uid}`} className="nav-link nav-item">Mis Mascotas</NavLink>
-                <NavLink to="/turnos" className="nav-link nav-item">Turnos</NavLink>      
-                <NavLink to="/signOut" className="nav-link nav-item"><button id="botonCerrarSesion" className="botonNavLogin">Cerrar Sesión</button></NavLink>
-                <NavLink to={`/perfil/${uid}`} className="nav-link nav-item"><CgProfile /></NavLink>
+                <NavLink to={`/misMascotas/${uid}`} className="nav-link nav-item" onClick={onLinkClick}>Mis Mascotas</NavLink>
+                <NavLink to="/turnos" className="nav-link nav-item" onClick={onLinkClick}>Turnos</NavLink>      
+                <NavLink to="/signOut" className="nav-link nav-item" onClick={onLinkClick}>
+                    <button id="botonCerrarSesion" className="botonNavLogin">Cerrar Sesión</button>
+                </NavLink>
+                <NavLink to={`/perfil/${uid}`} className="nav-link nav-item nav-profile-icon" onClick={onLinkClick} aria-label="Perfil de usuario">
+                    <CgProfile size={28} />
+                </NavLink>
             </>
         );
     }
 }
 
 const NavBar = () => {
+    const [menuAbierto, setMenuAbierto] = useState(false);
+
+    const cerrarMenu = () => setMenuAbierto(false);
+    const toggleMenu = () => setMenuAbierto(prev => !prev);
 
     return (
         <nav className="navbar" id="navbar">
-            <div className="nav-link-section">
-                {/* NavLink agrega por defecto la clase active cuando el path esta activo. 
-            Con la prop end le indicamos que matchee solo el path especificado, y no los paths hijos*/}
-                <NavLink to="/" className="nav-link nav-item huellitas">
-                    <figure>
-                        <img src="../../public/logoBanco.png" alt="" className="logoBlanco" />
+            <div className="navbar-container">
+                <NavLink to="/" className="nav-link nav-item huellitas" onClick={cerrarMenu}>
+                    <figure style={{ margin: 0 }}>
+                        <img src="/logoBanco.png" alt="Logo RAMVET" className="logoBlanco" onError={(e) => { e.currentTarget.src = "/logoNegro.jpg"; }} />
                     </figure>
-                    Cínica RAMVET
+                    <span className="navbar-brand-text">Clínica RAMVET</span>
                 </NavLink>
-                {/* <NavLink to="/" className="nav-link nav-item" end><GiHospitalCross className="logo" /></NavLink> */}
-                <NavLink to="/quienesSomos" className="nav-link nav-item">Quiénes Somos</NavLink>
-                <NavLink to="/adopciones" className="nav-link nav-item">Adopciones</NavLink>
-                {/* <Link to="/" className="nav-link nav-item">Inicio</Link> */}
-                <NavLink to="/consultas" className="nav-link nav-item">Consultas</NavLink>
-                <LogInLinks></LogInLinks>
-                <a href="https://www.instagram.com/" target="_blank" style={{ color: "black", paddingRight: "10px" }}><BsInstagram /></a>
-                <a href="https://es-la.facebook.com/" target="_blank" style={{ color: "black", paddingRight: "10px" }}><BsFacebook /></a>
 
-                {/* <Link to="/misMascotas" className="nav-link nav-item">Mis Mascotas</Link>
-                <Link to="/tienda" className="nav-link nav-item">Tienda</Link>
-                <Link to="/adopciones" className="nav-link nav-item">Adopciones</Link>
-                <Link to="/turnos" className="nav-link nav-item">Turnos</Link>
-                <Link to="/perfil" className="nav-link nav-item"><CgProfile /></Link>
-                <Link to="/" className="nav-link nav-item"><MdOutlineLocalGroceryStore /></Link>
-                <Link to="/signOut" className="nav-link nav-item">Cerrar Sesión</Link>
-                <a href="https://www.instagram.com/" target="_blank" style={{ color: "white", paddingRight: "10px" }}><BsInstagram /></a>
-                <a href="https://es-la.facebook.com/" target="_blank" style={{ color: "white", paddingRight: "10px" }}><BsFacebook /></a> */}
+                <button 
+                    className="navbar-toggler" 
+                    type="button" 
+                    onClick={toggleMenu} 
+                    aria-label={menuAbierto ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+                    aria-expanded={menuAbierto}
+                >
+                    {menuAbierto ? <FaTimes size={24} /> : <FaBars size={24} />}
+                </button>
+
+                <div className={`nav-link-section ${menuAbierto ? "abierto" : ""}`}>
+                    <NavLink to="/quienesSomos" className="nav-link nav-item" onClick={cerrarMenu}>Quiénes Somos</NavLink>
+                    <NavLink to="/adopciones" className="nav-link nav-item" onClick={cerrarMenu}>Adopciones</NavLink>
+                    <NavLink to="/consultas" className="nav-link nav-item" onClick={cerrarMenu}>Consultas</NavLink>
+                    <LogInLinks onLinkClick={cerrarMenu} />
+                    <div className="navbar-social-links">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="nav-social-icon">
+                            <BsInstagram size={20} />
+                        </a>
+                        <a href="https://es-la.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="nav-social-icon">
+                            <BsFacebook size={20} />
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav >
     )

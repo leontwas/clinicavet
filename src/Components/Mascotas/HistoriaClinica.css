@@ -1,9 +1,13 @@
-.container_historiaClinica{
+.container_historiaClinica {
     min-height: 82vh;
+    padding: 30px 15px 50px 15px;
 }
 
-.titulo_pagina{
-    font-style: italic;
+.titulo_pagina {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #1b262c;
+    margin-bottom: 25px;
 }
 
 .container_historias {
@@ -15,40 +19,52 @@
 }
 
 .historias_grupo {
-    width: 40%;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 680px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
 }
 
 .historias {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
-    box-shadow: 0px 0px 7px 0px #000000;
-    margin: 20px 0;
-    padding: 10px;
+    align-items: stretch;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    margin: 15px 0;
+    padding: 20px;
+    background-color: white;
 }
 
 .data_grupo {
     width: 100%;
-    padding: 5px;
+    padding: 6px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .Titulo_Campo {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1b262c;
+    margin-bottom: 4px;
 }
 
 .Datos_Obs {
-    width: 70%;
-    background-color: rgb(207, 207, 207);
-    border-radius: 5px;
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 8px;
     height: auto;
-    text-align: justify;
-    padding: 10px;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    word-break: break-word;
 }

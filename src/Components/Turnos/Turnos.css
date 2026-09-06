@@ -1,13 +1,36 @@
 .container_turnos {
   min-height: 85vh;
+  padding: 20px 15px 50px 15px;
+  width: 100%;
 }
 
 .boton {
-  background-color: rgb(141, 65, 141);
-  border-radius: 15px;
-  padding: 10px;
-  border: 1px solid lightgray;
+  background-color: purple;
+  border-radius: 25px;
+  border: 2px solid purple;
   color: white;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 24px;
+  margin: 15px 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 46px;
+}
+
+.boton:hover {
+  background-color: #5c005c;
+  border-color: #5c005c;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  .container_turnos {
+    padding: 15px 10px 40px 10px;
+  }
+
+  .boton {
+    width: 100%;
+    max-width: 280px;
+  }
 }

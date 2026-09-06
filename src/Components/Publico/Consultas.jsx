@@ -55,7 +55,11 @@ const Consultas = () => {
             <div className="dato">
               <iframe
                 id="mapa"
-               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d821.2901328322168!2d-58.436619926037196!3d-34.57480441124266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1759267340210!5m2!1ses!2sar" 
+                title="Mapa de ubicación RAMVET"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d821.2901328322168!2d-58.436619926037196!3d-34.57480441124266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1759267340210!5m2!1ses!2sar"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               ></iframe>
             </div>
           </div>

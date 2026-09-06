@@ -7,6 +7,7 @@ import { db } from "../firebaseConfig/firebase";
 import { Link } from "react-router-dom";
 import { getAuth } from "firebase/auth";
 import { AuthContext } from "../firebaseConfig/AuthProvider"
+import { obtenerFotoMascota, FOTOS_POR_DEFECTO } from "./adopcionesUtils";
 import "./Adopcion.css"
 import {
     FadeLoader
@@ -93,13 +94,22 @@ const Adopcion = () => {
             </div>)
     }
 
+    const fotoUrl = obtenerFotoMascota(adopcion.Foto, adopcion.Nombre, adopcion.Especie);
+
     return (
         <div id="container_adopcion">
             <div className="tarjeta_adopcion" key={adopcion.id}>
                 <div className="tarjeta_adopcion_titulo">{adopcion.Nombre}</div>
                 <div className="tarjeta_adopcion_cuerpo">
                     <div>
-                        <img src={`${adopcion.Foto}`} alt=""></img>
+                        <img 
+                            src={fotoUrl} 
+                            alt={adopcion.Nombre || "Mascota"} 
+                            onError={(e) => { 
+                                e.currentTarget.onerror = null; 
+                                e.currentTarget.src = obtenerFotoMascota("", adopcion.Nombre, adopcion.Especie); 
+                            }} 
+                        />
                     </div>
                     <div className="tarjeta_adopcion_grupotags">
                     <div className="tarjeta_adopcion_tag tag_violeta"><p>{adopcion.Especie}</p></div>

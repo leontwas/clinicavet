@@ -1,3 +1,28 @@
-.container_editarHistoria{
+.container_editarHistoria {
     min-height: 82vh;
+    padding: 30px 15px 50px 15px;
+    width: 100%;
+}
+
+.container_editarHistoria span {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #666;
+}
+
+.container_editarHistoria .volver {
+    min-height: 44px;
+    min-width: 140px;
+    margin: 10px 6px;
+}
+
+@media screen and (max-width: 576px) {
+    .container_editarHistoria {
+        padding: 20px 12px 40px 12px;
+    }
+
+    .container_editarHistoria .texto_consulta {
+        max-width: 100%;
+    }
 }

@@ -1,18 +1,31 @@
 .boton_ver_mascotas_btn {
     color: purple;
     border-radius: 30px;
-    border: 3px solid purple;
+    border: 2px solid purple;
     cursor: pointer;
     overflow: hidden;
     outline: none;
     font-weight: bold;
     text-decoration: none;
-    width: 150px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: white;
+    transition: all 0.2s ease;
+    min-height: 40px;
+    white-space: nowrap;
 }
 
 .boton_ver_mascotas_btn:hover {
     background-color: purple;
-    border: 3px solid rgb(109, 0, 109);
+    border-color: #5c005c;
     color: white;
 }
+
+@media screen and (max-width: 576px) {
+    .boton_ver_mascotas_btn {
+        font-size: 0.82rem;
+        padding: 6px 12px;
+    }
+}
+
 

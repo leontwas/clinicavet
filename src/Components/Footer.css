@@ -1,58 +1,84 @@
 #footer {
-    background-color: black;
+    background-color: #111111;
     color: white;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
     width: 100%;
-    height: 6rem;
+    min-height: 5.5rem;
+    height: auto;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    gap: 20px;
+    margin-top: auto;
     text-decoration: none;
 }
 
-
 #footer ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #div-footer-logo {
-    width: 5%;
-    margin-right: auto;
-    margin-left: 2%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-#div-footer-contenido{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 7%;
-    width: 93%;
-    height: 100%;
-}
-
-#div-footer-contenido div {
-    height: fit-content;
-    margin-top: auto;
-}
-
-#div-footer-contenido > div > ul{
     display: flex;
     flex-direction: row;
-    margin-bottom: 0;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    font-size: 1.05rem;
 }
 
-#div-footer-contenido > div > p {
-    margin-top: auto;
-    font-size: 12px;
-    margin-bottom: 0;
+#div-footer-logo img {
+    height: 38px;
+    width: auto;
+    border-radius: 4px;
 }
-#div-footer-copyright{
-    margin-top: auto;
+
+#div-footer-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex: 1 1 300px;
+}
+
+#div-footer-contenido > div > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px 12px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+#div-footer-copyright p {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 24px 16px;
+    }
+
+    #div-footer-logo {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #div-footer-contenido {
+        align-items: center;
+        width: 100%;
+    }
+
+    #div-footer-contenido > div > ul {
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+    }
 }

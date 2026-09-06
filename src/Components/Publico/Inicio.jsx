@@ -39,7 +39,10 @@ const Inicio = () => {
         </div>
 
         <div id="div_inicio_cirugia">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Gtmb5YRf8midaxwxRB4UfSSQVKt-GhqCCQ&usqp=CAU" alt="" />
+          <img 
+            src="/cirugia_icon.svg" 
+            alt="Cirugía Veterinaria" 
+          />
           <h4>Cirugía</h4>
         </div>
       </div>

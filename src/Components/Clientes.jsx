@@ -96,7 +96,7 @@ const Clientes = () => {
         <>
             <div className="container">
                 <h1 className="titulo_pagina">Clientes</h1>
-                <Table striped>
+                <Table responsive striped hover className="mt-4">
                     <thead>
                         <tr>
                             {/* <th>Id</th> */}
